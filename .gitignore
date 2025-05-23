@@ -1,6 +1,5 @@
 /node_modules
-.vite
+/.idea
+/.vite
 
-src/test.js
-.idea
 /dist

@@ -1,5 +1,6 @@
 import styles from './CharacterCard.module.css'
 import {useLocation} from "react-router-dom";
+import {Loader} from "../../../../components/loader/Loader";
 
 export const CharacterCard = () => {
 
@@ -11,7 +12,7 @@ export const CharacterCard = () => {
 
     return (
         <>
-            {isLoading && <h1>Loading...</h1>}
+            {isLoading && <Loader/>}
             {error && <p>{error.toString()}</p>}
             <div className={`${styles.card} ${styles['card-background']}`}>
                 <img src={image}

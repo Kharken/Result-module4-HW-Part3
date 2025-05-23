@@ -1,6 +1,7 @@
 import styles from './EpisodeCard.module.css'
 import {useLocation} from "react-router-dom";
 import {EpisodeCardProps} from "../../../../types/episode-types";
+import {Loader} from "../../../../components/loader/Loader";
 
 export const EpisodeCard = () => {
 
@@ -11,7 +12,7 @@ export const EpisodeCard = () => {
 
     return (
         <>
-            {isLoading && <h1>Loading...</h1>}
+            {isLoading && <Loader/>}
             {error && <p>{error.toString()}</p>}
             <div className={styles.card}>
                 <div className={styles['card-content']}>
