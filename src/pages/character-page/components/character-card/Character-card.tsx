@@ -1,16 +1,19 @@
 import styles from './styles.module.css'
-import {CharacterCardProps} from "../../../../types/character-types";
+import {useLocation} from "react-router-dom";
 
-export const CharacterCard = (props: CharacterCardProps) => {
+export const CharacterCard = () => {
 
-    const {isLoading, error, data } = props;
+    const location = useLocation();
+    const {isLoading, error, data} = location.state;
     const {status, species, name, gender, created, type, image} = data;
+    const createdDate = new Date(created).toLocaleDateString();
+
 
     return (
         <>
             {isLoading && <h1>Loading...</h1>}
             {error && <p>{error.toString()}</p>}
-            <div className={styles.card}>
+            <div className={`${styles.card} ${styles['card-background']}`}>
                 <img src={image}
                      alt={name}
                      className={styles['card-image']}/>
@@ -22,7 +25,7 @@ export const CharacterCard = (props: CharacterCardProps) => {
                         <li>Type: {type}</li>
                         <li>Gender: {gender}</li>
                     </ul>
-                    <span className={styles['created-date']}>Created: {created}</span>
+                    <span className={styles['created-date']}>Created: {createdDate}</span>
                 </div>
             </div>
         </>
