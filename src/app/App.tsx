@@ -1,14 +1,15 @@
-import {MainPage} from "../pages/main-page/Main-page";
+import {MainPage} from "../pages/main-page/MainPage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {AppLayout} from "../components/app-layout/App-layout";
-import {CharacterPage} from "../pages/character-page/Character-page";
-import './app.css'
+import {AppLayout} from "../components/app-layout/AppLayout";
+import {CharacterPage} from "../pages/character-page/CharacterPage";
+import './App.css'
 import {ROUTES} from "../service/routes";
-import {EpisodePage} from "../pages/episode-page/Episode-page";
-import {CharacterCard} from "../pages/character-page/components/character-card/Character-card";
-import {EpisodeCard} from "../pages/episode-page/components/Episode-card/Episode-card";
-import {LocationPage} from "../pages/location-page/Location-page";
-import {LocationCard} from "../pages/location-page/components/Location-card/Location-card";
+import {EpisodePage} from "../pages/episode-page/EpisodePage";
+import {CharacterCard} from "../pages/character-page/components/character-card/CharacterCard";
+import {EpisodeCard} from "../pages/episode-page/components/episode-card/EpisodeCard";
+import {LocationPage} from "../pages/location-page/LocationPage";
+import {LocationCard} from "../pages/location-page/components/location-card/LocationCard";
+import {NotFoundPage} from "../pages/not-found-page/NotFoundPage";
 
 export const App = () => {
     return (
@@ -39,6 +40,9 @@ export const App = () => {
                         path={ROUTES.Location}
                         element={<LocationCard/>}/>
                 </Route>
+                <Route
+                    path={ROUTES.NotFound}
+                    element={<NotFoundPage/>}/>
             </Routes>
         </BrowserRouter>
     )

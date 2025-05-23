@@ -1,7 +1,7 @@
-import styles from './styles.module.css'
+import styles from './EpisodePage.module.css'
 import {useFetch} from "../../hooks/useFetch";
 import {API_ROUTES} from "../../const/const";
-import {EpisodeListItem} from "./components/Episode-list-item/Episode-list-item";
+import {EpisodeListItem} from "./components/episode-list-item/EpisodeListItem";
 import {Episode} from "../../types/episode-types";
 
 export const EpisodePage = () => {

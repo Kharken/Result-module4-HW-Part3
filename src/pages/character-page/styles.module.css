@@ -1,9 +1,0 @@
-.character-list {
-    list-style: none;
-    padding: 0;
-    margin-inline: auto;
-    max-width: 800px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}

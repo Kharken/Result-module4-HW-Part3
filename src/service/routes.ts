@@ -6,4 +6,5 @@ export enum ROUTES {
     Character = '/characters/:id',
     Episode = '/episode/:id',
     Location = '/location/:id',
+    NotFound = '*',
 }

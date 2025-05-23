@@ -13,10 +13,3 @@
         z-index: -1;
     }
 }
-
-.main {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    flex: 1;
-}

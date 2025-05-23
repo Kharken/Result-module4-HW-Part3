@@ -1,6 +1,6 @@
 import {CharacterCardProps} from "../../../../types/character-types";
 import {Link} from "react-router-dom";
-import styles from './styles.module.css'
+import styles from './CharacterListItem.module.css'
 
 export const CharacterListItem = (props: CharacterCardProps) => {
     const {isLoading, error, data} = props;

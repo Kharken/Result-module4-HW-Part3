@@ -1,10 +1,10 @@
+import {CommonData, CommonProps} from "./common-types";
+
 type CharacterGender = 'Male' | 'Female' | 'unknown';
 type CharacterStatus = 'Alive' | 'unknown' | 'Dead';
 type CharacterSpecies = 'Human' | 'Alien';
 
-export interface Character {
-    id: number;
-    name: string;
+export interface Character extends CommonData {
     status: CharacterStatus;
     species: CharacterSpecies;
     type: string;
@@ -13,8 +13,6 @@ export interface Character {
     created: string;
 }
 
-export interface CharacterCardProps {
-    isLoading: boolean;
-    error: unknown;
+export interface CharacterCardProps extends CommonProps {
     data: Character;
 }

@@ -1,4 +1,4 @@
-import styles from './styles.module.css'
+import styles from './CharacterCard.module.css'
 import {useLocation} from "react-router-dom";
 
 export const CharacterCard = () => {

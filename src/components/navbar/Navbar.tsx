@@ -1,6 +1,6 @@
 import {API_ROUTES} from "../../const/const";
 import {Link} from "react-router-dom";
-import styles from "./style.module.css";
+import styles from "./Navbar.module.css";
 import {ROUTES} from "../../service/routes";
 
 export const Navbar = () => {

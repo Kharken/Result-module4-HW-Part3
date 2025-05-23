@@ -1,15 +1,15 @@
-import styles from './styles.module.css'
+import styles from './EpisodeListItem.module.css'
 import {Link} from 'react-router-dom';
-import {LocationCardProps} from "../../../../types/location-types";
+import {EpisodeCardProps} from "../../../../types/episode-types";
 
-export const LocationListItem = (props: LocationCardProps) => {
+export const EpisodeListItem = (props: EpisodeCardProps) => {
 
     const {isLoading, error, data} = props;
     const {id, name} = data;
 
     return (
         <li className={styles['episode-item']}>
-            <Link to={`/location/${id}`}
+            <Link to={`/episode/${id}`}
                   state={{isLoading, data, error}}
                className={styles['episode-link']}>
                 <div className={styles['episode-id']}>{id}</div>
